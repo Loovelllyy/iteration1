@@ -9,42 +9,48 @@
 </head>
 <body>
   <h1>Iteration №1</h1>
-  <hr>
-  <div style="display: flex; flex-direction: column; max-width: 500px; align-items: center">
-    <img src="./media/img1.jpg" alt="" height="300px" width="300px">
-    <input type="text" placeholder="type any text here">
-    <input type="number" placeholder="type any numbers here">
-    <input type="date">
-    <p style="text-align: center">
-      <abbr  title="this is start of lorem text :)">Lorem</abbr> ipsum dolor sit amet, consectetur adipisicing elit.<br>
-      A, alias blanditiis corporis cum dolor dolorem doloribus enim ex,
-      ipsa itaque minus modi nisi odio optio possimus repellendus sed,
-      vel <a href="https://www.w3schools.com/html/html_links.asp">vero</a>
-    </p>
-  </div>
-  <hr>
+  <div class="wrapper">
+      <img src="./media/img1.jpg" alt="" height="300px" width="300px">
+    </div>
 
-  <table border="1px" style="width: 200px; text-align: center; margin-bottom: 20px">
-    <caption style="color: white; background: black">Table</caption>
-      <tr>
-        <th>*</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-      </tr>
-      <tr><td>1</td><td>1</td><td>2</td><td>3</td></tr>
-      <tr><td>2</td><td>2</td><td>4</td><td>6</td></tr>
-      <tr><td>3</td><td>3</td><td>6</td><td>9</td></tr>
-  </table>
+    <div class="wrapper">
+      <input type="text" placeholder="type any text here">
+      <input type="number" placeholder="type any numbers here">
+      <input type="date">
+    </div>
 
-  <form action="#" style="display: flex; flex-direction: column;
-        width: max-content; border: 2px solid black; padding: 10px">
-    <lable for="name">Your name:</lable>
-    <input type="text" id="name">
-    <lable for="age">Your age</lable>
-    <input type="number" min="1"><br>
-    <button>Сonfirm</button>
-  </form>
+    <div class="wrapper">
+      <p>
+        <abbr  title="this is start of lorem text :)">Lorem</abbr> ipsum dolor sit amet, consectetur adipisicing elit.<br>
+        A, alias blanditiis corporis <b>cum dolor dolorem doloribus</b> enim ex,
+        ipsa itaque minus <span>modi nisi odio optio possimus repellendus</span> sed,
+        vel <a href="https://www.w3schools.com/html/html_links.asp">vero</a>
+      </p>
+    </div>
 
+    <div class="wrapper">
+      <table>
+        <caption>Table</caption>
+          <tr>
+            <th>*</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+          </tr>
+        <tbody class="table-style"><tr><td>1</td><td>1</td><td>2</td><td>3</td></tr></tbody>
+          <tr><td>2</td><td>2</td><td>4</td><td>6</td></tr>
+        <tbody class="table-style"><tr><td>3</td><td>3</td><td>6</td><td>9</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="wrapper">
+      <form action="#">
+        <label for="name">Your name:</label>
+        <input type="text" id="name">
+        <label for="age">Your age:</label>
+        <input type="number" min="1"><br>
+        <button class="btn-confirm" id="age">Сonfirm</button>
+      </form>
+    </div>
 </body>
 </html>
