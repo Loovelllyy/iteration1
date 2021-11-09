@@ -1,0 +1,12 @@
+@media (max-width: 1280px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .green-blocks {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
