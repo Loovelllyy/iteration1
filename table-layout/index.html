@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="test project">
+    <meta name="author" content="Katerina Sedykh">
+    <meta http-equiv="refresh" content="180">
+    <link rel="stylesheet" href="styles-table.css">
+    <title>Table Layout</title>
+</head>
+<body>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2" class="red">
+                    <img src="../media/img3.jpg" alt="">
+                </td>
+                <td rowspan="4" class="yellow">
+                    <h1>Iteration 1</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="green">
+                    <p>there will be a lot of inputs :)</p>
+                    <input type="text" placeholder="type any text here">
+                    <input type="number" placeholder="type any numbers here">
+                    <input type="date">
+                    <input type="button" value="Click me!">
+                    <input type="radio">
+                    <input type="submit">
+                    <input type="file">
+                    <input type="password" placeholder="write your password here">
+                </td>
+                <td rowspan="3" class="pink">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ab, aperiam commodi dolorum facere illum in ipsam mollitia
+                        nostrum pariatur qui, quod quos soluta! Ab ad ea perferendis
+                        reprehenderit tenetur voluptatem.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="green">
+                    <table>
+                        <caption>Table</caption>
+                        <tr>
+                            <th>*</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                        </tr>
+                        <tbody class="table-style"><tr><td>1</td><td>1</td><td>2</td><td>3</td></tr></tbody>
+                        <tr><td>2</td><td>2</td><td>4</td><td>6</td></tr>
+                        <tbody class="table-style"><tr><td>3</td><td>3</td><td>6</td><td>9</td></tr></tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="green">
+                    <form action="#">
+                        <label for="name">Your name:</label>
+                        <input type="text" id="name">
+                        <label for="age">Your age:</label>
+                        <input type="number" min="1"><br>
+                        <button class="btn-confirm" id="age">Confirm</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

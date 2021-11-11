@@ -16,15 +16,22 @@ body {
 
 h1 {
     text-align: center;
+    transform: rotate(90deg);
 }
 
 img {
     width: 100%;
 }
 
+input {
+    padding: 3px;
+    margin: 3px;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -43,22 +50,8 @@ img {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: max-content;
 }
-
-.green-blocks .wrapper {
-    max-width: 100px;
-}
-/*.wrapper:nth-child(3) {*/
-/*    grid-area: green-block-1;*/
-/*}*/
-
-/*.wrapper:nth-child(4) {*/
-/*    grid-area: green-block-2;*/
-/*}*/
-
-/*.wrapper:nth-child(5) {*/
-/*    grid-area: green-block-3;*/
-/*}*/
 
 .wrapper:nth-child(6) {
     grid-area: pink-block;
@@ -69,7 +62,6 @@ table, tr, th, td {
 }
 
 table {
-    width: 100%;
     text-align: center;
 }
 
@@ -102,8 +94,4 @@ form {
 
 .btn-confirm:active {
     transform: scale(1.0);
-}
-
-input {
-    width: 100%;
 }

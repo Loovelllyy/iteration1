@@ -1,0 +1,62 @@
+table {
+    border-spacing: 10px;
+    width: 100%;
+}
+
+table td {
+    border: none;
+}
+
+.green {
+    text-align: center;
+    width: 100px;
+}
+
+.green > * {
+    display: block;
+    margin: 0 auto;
+}
+
+.green > form {
+    display: block;
+}
+
+.pink {
+    width: 140px;
+}
+
+.pink {
+    text-align: center;
+}
+
+.yellow {
+    width: 150px;
+}
+
+.yellow h1 {
+    transform: rotate(90deg);
+}
+
+form > * {
+    display: block;
+    margin: 0 auto;
+}
+
+/*styles for table-in-table*/
+
+
+.green table {
+    width: max-content;
+    text-align: center;
+    border: 1px solid black;
+    border-spacing: 2px;
+}
+
+.green table caption {
+    color: white;
+    background: black;
+}
+
+.table-style {
+    background: rgba(0, 0, 0, 0.22);
+}
