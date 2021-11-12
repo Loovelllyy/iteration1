@@ -190,14 +190,27 @@
 /* styles for second heart */
 
 
-.heart-container3 {
+.container-desk {
     background: black;
     width: 500px;
     height: 300px;
     position: relative;
-    animation: ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hidden {
-    opacity: 0;
+.container-desk p {
+    font-size: 2rem;
+    width: max-content;
+    color: white;
+}
+
+.circle-style {
+    position: absolute;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: black;
 }
