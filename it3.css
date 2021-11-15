@@ -95,3 +95,37 @@ form {
 .btn-confirm:active {
     transform: scale(1.0);
 }
+
+
+.container-desk {
+    background: black;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-desk p {
+    font-size: 2rem;
+    width: max-content;
+    color: white;
+    background: purple;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.circle-style {
+    position: absolute;
+    left: 0;
+    height: 50px;
+    width: max-content;
+    padding: 5px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -52,23 +52,25 @@
     margin: 100px 0;
 }
 
-.container-rotate {
+.container-rotate,
+.black-circle,
+.circle1, .circle2,
+.circle3, .circle4,
+.heart2 {
     position: absolute;
     margin: auto;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
+}
+
+
+.container-rotate {
     transform: rotate(45deg);
 }
 
 .black-circle {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     width: 250px;
     height: 250px;
     background: black;
@@ -77,72 +79,43 @@
 }
 
 .circle1 {
-    position: absolute;
     height: 220px;
     width: 220px;
     border: 7px solid lightpink;
     border-radius: 50%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     animation: 2s wave ease 2.4s infinite;
 }
 
 .circle2 {
-    position: absolute;
     height: 190px;
     width: 190px;
     border: 7px solid lightpink;
     border-radius: 50%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     animation: 2s wave ease 2.3s infinite;
 }
 
 
 .circle3 {
-    position: absolute;
     height: 160px;
     width: 160px;
     border: 7px solid lightpink;
     border-radius: 50%;
     margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     animation: 2s wave ease 2.2s infinite;
 }
 
 .circle4 {
-    position: absolute;
     height: 130px;
     width: 130px;
     border: 7px solid lightpink;
     border-radius: 50%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     animation: 2s wave ease 2.1s infinite;
 }
 
 .heart2 {
-    position: absolute;
     width: 50px;
     height: 50px;
     background: lightpink;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     animation: 2s wave ease 2s infinite;
 }
 
@@ -188,29 +161,3 @@
 
 
 /* styles for second heart */
-
-
-.container-desk {
-    background: black;
-    width: 500px;
-    height: 300px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-desk p {
-    font-size: 2rem;
-    width: max-content;
-    color: white;
-}
-
-.circle-style {
-    position: absolute;
-    left: 0;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: black;
-}
