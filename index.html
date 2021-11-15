@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="adaptive.css">
   <link rel="stylesheet" href="animation.css">
   <title>First iteration</title>
+
 </head>
 <body>
   <div class="wrapper">
@@ -25,7 +26,8 @@
   <div class="green-blocks">
     <div class="wrapper">
       <p>there will be a lot of inputs :)</p>
-      <input type="text" placeholder="type any text here">
+      <input type="text" placeholder="type any text here" id="text">
+      <button id="changeText">Click to change text in paragraph</button>
       <input type="number" placeholder="type any numbers here">
       <input type="date">
       <input type="button" value="Click me!">
@@ -33,6 +35,28 @@
       <input type="submit">
       <input type="file">
       <input type="password" placeholder="write your password here">
+      <fieldset id="fruits">
+        <legend>What fruit do you like?</legend>
+        <div>
+          <label>
+            <input class="radio" type="radio" name="fruits" value="Apple">
+            Apple
+          </label>
+        </div>
+        <div>
+        <label>
+          <input class="radio"  type="radio" name="fruits" value="Banana">
+          Banana
+        </label>
+      </div>
+        <div>
+          <label>
+            <input class="radio"  type="radio" name="fruits" value="Grape">
+            Grape
+          </label>
+        </div>
+      </fieldset>
+      <p id="result-fruit-text"></p>
     </div>
 
     <div class="wrapper">
@@ -62,7 +86,7 @@
   </div>
 
   <div class="wrapper">
-    <p>
+    <p id="textArea">
       <abbr  title="this is start of lorem text :)">Lorem</abbr> ipsum dolor sit amet, consectetur adipisicing elit.<br>
       A, alias blanditiis corporis <b>cum dolor dolorem doloribus</b> enim ex,
       ipsa itaque minus <span>modi nisi odio optio possimus repellendus</span> sed,
@@ -85,8 +109,49 @@
       <p>Click here!</p>
       <div class="circle circle-style">mouse over</div>
     </div>
+    <div>
+    </div>
   </div>
   <script src="index.js"></script>
+  <script>
+    const inputText = document.getElementById("text");
+    const textArea = document.getElementById("textArea");
+    const btnChange = document.getElementById("changeText");
+    const fieldset = document.getElementById("fruits");
+    const result = document.getElementById("result-fruit-text");
+    let fruits = document.getElementsByClassName("radio")
+    fruits1 = Array.from(document.getElementsByClassName("radio"))
+
+    // console.log(btnChange);
+    btnChange.addEventListener("mouseover", () => {
+      btnChange.style.background = "lightpink"
+    })
+
+    btnChange.addEventListener("click", () => {
+      textArea.innerHTML = textArea.textContent + inputText.value + " ";
+    })
+
+    btnChange.addEventListener("mouseleave", () => {
+      btnChange.style.background = "lightgrey"
+    })
+
+    inputText.addEventListener("focus", () => {
+      inputText.style.borderRadius = '20%'
+    })
+
+    inputText.addEventListener("blur", () => {
+      inputText.style.borderRadius = '0';
+    })
+
+    fieldset.addEventListener("change", () => {
+
+      for (let i = 0; i < fruits.length; i++) {
+        if (fruits[i].checked) {
+          result.innerHTML = `Your favorite fruit is ${fruits[i].value}, nice!`
+      }
+    }
+    })
+  </script>
 </body>
 </html>
 
