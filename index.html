@@ -28,10 +28,12 @@
       <p>there will be a lot of inputs :)</p>
       <input type="text" placeholder="type any text here" id="text">
       <button id="changeText">Click to change text in paragraph</button>
-      <input type="number" placeholder="type any numbers here">
+      <input type="number" placeholder="type any number here" class="operand">
+      <input type="number" placeholder="type any numbers here" class="operand">
+      <button class="btn-result">click here to get result</button>
+      <p class="result-addition">The result of the addition will be here</p>
       <input type="date">
       <input type="button" value="Click me!">
-      <input type="radio">
       <input type="submit">
       <input type="file">
       <input type="password" placeholder="write your password here">
@@ -119,16 +121,18 @@
     const btnChange = document.getElementById("changeText");
     const fieldset = document.getElementById("fruits");
     const result = document.getElementById("result-fruit-text");
-    let fruits = document.getElementsByClassName("radio")
+    let fruits = document.querySelectorAll(".radio")
     fruits1 = Array.from(document.getElementsByClassName("radio"))
 
-    // console.log(btnChange);
     btnChange.addEventListener("mouseover", () => {
       btnChange.style.background = "lightpink"
     })
 
-    btnChange.addEventListener("click", () => {
-      textArea.innerHTML = textArea.textContent + inputText.value + " ";
+    btnChange.addEventListener("click", (ev) => {
+      if (inputText.value) {
+        textArea.innerHTML = textArea.textContent + inputText.value + " ";
+        inputText.value = ""
+      }
     })
 
     btnChange.addEventListener("mouseleave", () => {
@@ -144,26 +148,12 @@
     })
 
     fieldset.addEventListener("change", () => {
-
-      for (let i = 0; i < fruits.length; i++) {
-        if (fruits[i].checked) {
-          result.innerHTML = `Your favorite fruit is ${fruits[i].value}, nice!`
-      }
-    }
+      fruits.forEach(el => {
+        if (el.checked) {
+          result.innerHTML = `Your favorite fruit is ${el.value}, nice!`
+        }
+      })
     })
   </script>
 </body>
 </html>
-
-
-<!--<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg" class="hidden">-->
-<!--  &lt;!&ndash; Created with SVG-edit - https://github.com/SVG-Edit/svgedit&ndash;&gt;-->
-<!--  <g class="layer">-->
-<!--    <title>Layer 1</title>-->
-<!--    <g id="svg_7">-->
-<!--      <rect fill="#ff0000" height="97" id="svg_2" stroke="#000000" stroke-width="0" transform="rotate(45 300 173)" width="97" x="251.5" y="124.5"/>-->
-<!--      <ellipse cx="264" cy="134.934251" fill="#ff0000" id="svg_4" rx="50.499999" ry="50.418018" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>-->
-<!--      <ellipse cx="334.5" cy="135.500001" fill="#ff0000" id="svg_6" rx="50.499999" ry="50.418018" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>-->
-<!--    </g>-->
-<!--  </g>-->
-<!--</svg>-->
