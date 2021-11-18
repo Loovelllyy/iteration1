@@ -30,8 +30,14 @@
       <button id="changeText">Click to change text in paragraph</button>
       <input type="number" placeholder="type any number here" class="operand">
       <input type="number" placeholder="type any numbers here" class="operand">
-      <button class="btn-result">click here to get result</button>
-      <p class="result-addition">The result of the addition will be here</p>
+      <div class="calc">
+        <button class="btn-result">top + bottom</button>
+        <button class="">top - bottom</button>
+        <button>top * button</button>
+        <button>top / bottom</button>
+        <button>top ^ bottom</button>
+      </div>
+      <p class="result-addition">The result of the operation will be here</p>
       <input type="date">
       <input type="button" value="Click me!">
       <input type="submit">
@@ -121,8 +127,7 @@
     const btnChange = document.getElementById("changeText");
     const fieldset = document.getElementById("fruits");
     const result = document.getElementById("result-fruit-text");
-    let fruits = document.querySelectorAll(".radio")
-    fruits1 = Array.from(document.getElementsByClassName("radio"))
+    let fruits = document.querySelectorAll(".radio");
 
     btnChange.addEventListener("mouseover", () => {
       btnChange.style.background = "lightpink"

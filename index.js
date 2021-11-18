@@ -3,6 +3,7 @@ const circle = document.getElementsByClassName("circle")[0];
 const operands = document.querySelectorAll(".operand");
 const btnResult = document.querySelector(".btn-result");
 const resultAddition = document.querySelector(".result-addition");
+const calcBtn = document.querySelector(".calc");
 
 const random = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -32,3 +33,21 @@ btnResult.addEventListener("click", () => {
     }
 })
 
+
+calcBtn.addEventListener("click", (ev)  => {
+    // console.log(ev.target.textContent);
+    switch (ev.target.textContent) {
+        case 'top - bottom':
+            resultAddition.textContent = `${Number(operands[0].value) - Number(operands[1].value)}`;
+            break;
+        case 'top * button':
+            resultAddition.textContent = `${Number(operands[0].value) * Number(operands[1].value)}`;
+            break;
+        case 'top / bottom':
+            resultAddition.textContent = `${Number(operands[0].value) / Number(operands[1].value)}`;
+            break;
+        case 'top ^ bottom':
+            resultAddition.textContent = `${Math.pow(Number(operands[0].value), Number(operands[1].value))}`;
+            break;
+    }
+})
