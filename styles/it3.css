@@ -130,6 +130,10 @@ form {
     justify-content: center;
 }
 
+.circle-style:hover {
+    background: red;
+}
+
 .calc > button {
     display: block;
     margin: 5px 0;

@@ -15,9 +15,13 @@ containerDesk.addEventListener("click", () => {
     // circle.style.height = `${circleWidth}px`;
     circle.style.background = `rgb(${random(0, 256)}, ${random(0, 256)}, ${random(0, 256)})`;
     circle.style.left = `${random(0, 500 - circleWidth)}px`;
-    circle.style.top = `${random(0, 300 - circleWidth)}px`
+    circle.style.top = `${random(0, 300 - circleWidth)}px`;
 })
 
+circle.addEventListener("mouseover", () => {
+    circle.style.background = `rgb(${random(0, 256)}, ${random(0, 256)}, ${random(0, 256)})`;
+    circle.style.background = `rgb(${random(0, 256)}, ${random(0, 256)}, ${random(0, 256)})`;
+})
 
 btnResult.addEventListener("click", () => {
     try {
@@ -33,15 +37,14 @@ btnResult.addEventListener("click", () => {
     }
 })
 
-
 calcBtn.addEventListener("click", (ev)  => {
     // console.log(ev.target.textContent);
     switch (ev.target.textContent) {
         case 'top - bottom':
-            resultAddition.textContent = `${Number(operands[0].value) - Number(operands[1].value)}`;
+            resultAddition.textContent = `${+operands[0].value - +operands[1].value}`;
             break;
         case 'top * button':
-            resultAddition.textContent = `${Number(operands[0].value) * Number(operands[1].value)}`;
+            resultAddition.textContent = `${+operands[0].value * +operands[1].value}`;
             break;
         case 'top / bottom':
             resultAddition.textContent = `${Number(operands[0].value) / Number(operands[1].value)}`;
@@ -51,3 +54,11 @@ calcBtn.addEventListener("click", (ev)  => {
             break;
     }
 })
+
+let num = [1, 2, 3, 4, 5];
+
+let [first, second, ...all] = num;
+
+console.log(first);
+console.log(second);
+console.log(all);
