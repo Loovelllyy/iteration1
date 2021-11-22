@@ -38,7 +38,6 @@ btnResult.addEventListener("click", () => {
 })
 
 calcBtn.addEventListener("click", (ev)  => {
-    // console.log(ev.target.textContent);
     switch (ev.target.textContent) {
         case 'top - bottom':
             resultAddition.textContent = `${+operands[0].value - +operands[1].value}`;
@@ -54,11 +53,3 @@ calcBtn.addEventListener("click", (ev)  => {
             break;
     }
 })
-
-let num = [1, 2, 3, 4, 5];
-
-let [first, second, ...all] = num;
-
-console.log(first);
-console.log(second);
-console.log(all);
