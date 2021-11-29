@@ -5,7 +5,8 @@ const btnResult = document.querySelector(".btn-result");
 const resultAddition = document.querySelector(".result-addition");
 const calcBtn = document.querySelector(".calc");
 const table = document.querySelector(".table");
-const [output1, output2] = document.querySelectorAll(".outputs")
+const [output1, output2, output3] = document.querySelectorAll(".outputs");
+const click = document.getElementById("click-btn");
 
 const random = (min = 0, max = 256) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -62,14 +63,23 @@ const sum = (...arr) => {
     }
     return sum;
 }
-// console.log(outputs)
 
 table.addEventListener("click", (ev) => {
     if (+ev.target.textContent) {
         arr.push(+ev.target.textContent)
-        output1.textContent = `Максимальное кликнутое: ${Math.max(...arr)}`
-        output2.textContent = `Сумма кликнутых чисел: ${sum(...arr)}`
-
+        output2.textContent = `Максимальное кликнутое: ${Math.max(...arr)}`
+        output3.textContent = `Сумма кликнутых чисел: ${sum(...arr)}`
     }
+})
 
+
+function* testGen() {
+    for (let x = 1;; x++) {
+        yield x;
+    }
+}
+let g = testGen();
+
+click.addEventListener("click", () => {
+    output1.textContent = `Количество кликов: ${g.next().value}`;
 })

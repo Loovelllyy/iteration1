@@ -1,7 +1,5 @@
 const buttons = document.querySelector(".pets-btn");
 const pet = document.querySelector(".pet");
-const click = document.getElementById("click-btn");
-const output = document.querySelector(".output-count");
 
 class Animal {
     constructor() {
@@ -85,15 +83,4 @@ buttons.addEventListener("click", (ev) => {
             }
             break;
     }
-})
-
-function* testGen() {
-    for (let x = 1;; x++) {
-        yield x;
-    }
-}
-let g = testGen();
-
-click.addEventListener("click", () => {
-    output.textContent = `Количество кликов: ${g.next().value}`;
 })
