@@ -7,6 +7,8 @@ const calcBtn = document.querySelector(".calc");
 const table = document.querySelector(".table");
 const [output1, output2, output3] = document.querySelectorAll(".outputs");
 const click = document.getElementById("click-btn");
+const aboutBlock = document.querySelector(".bubble-style");
+const date = document.querySelector(".date");
 
 const random = (min = 0, max = 256) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -82,4 +84,41 @@ let g = testGen();
 
 click.addEventListener("click", () => {
     output1.textContent = `Количество кликов: ${g.next().value}`;
+})
+
+addEventListener("keydown", (ev) => {
+
+    function makeStr() {
+        let text = "";
+        let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+        for (let i = 0; i < 5; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return text;
+    }
+
+    if (ev.altKey && ev.code === "KeyA") {
+        aboutBlock.classList.toggle("hidden");
+        aboutBlock.innerHTML = `date from localStorage: ${localStorage.getItem('date')}<br>
+                                date from sessionStorage: ${sessionStorage.getItem("date")}<br>
+                                current URL = ${location}`;
+    }
+
+    if (ev.altKey && ev.code === "KeyC") {
+        document.cookie = `${makeStr()}=${makeStr()}; domain=localhost; secure; samesite`
+    }
+
+    if (ev.altKey && ev.code === "KeyR") {
+        let resPrompt = prompt("значение ключа из cookie", '');
+        if (!document.cookie.includes(resPrompt)) return 0;
+        // console.log("that`s cookie will be deleted", )
+        console.log(document.cookie)
+    }
+})
+
+date.addEventListener("change", (ev) => {
+    console.log(ev.target.value);
+    localStorage.setItem('date', ev.target.value);
+    sessionStorage.setItem('date', ev.target.value);
 })

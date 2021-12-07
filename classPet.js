@@ -17,7 +17,6 @@ class Animal {
     removeCloud() {
         this.msg.remove();
     }
-
 }
 
 class Pet extends Animal {
@@ -36,7 +35,7 @@ class Pet extends Animal {
 
     set checkPet(value) {
         this.name = value;
-        return "";
+        // return "";
     }
 
     get checkPet() {

@@ -11,7 +11,8 @@
     transform: rotate(45deg);
 }
 
-.heart {
+.heart,
+.move-heart-2 {
     width: 50px;
     height: 50px;
     background: purple;
@@ -19,7 +20,9 @@
 }
 
 .heart::before,
-.heart::after {
+.heart::after,
+.move-heart-2::after,
+.move-heart-2::before {
     display: block;
     content: "";
     width: 50px;
@@ -29,11 +32,13 @@
     border-radius: 50%;
 }
 
-.heart::before {
+.heart::before,
+.move-heart-2::before {
     bottom: 25px;
 }
 
-.heart::after {
+.heart::after,
+.move-heart-2::after {
     right: 25px;
 }
 
@@ -116,7 +121,7 @@
     animation: 2s wave ease 2s infinite;
 }
 
-.heart2::before {
+.heart2::before  {
     display: block;
     content: "";
     width: 50px;
@@ -156,5 +161,88 @@
     }
 }
 
+@keyframes heart {
+    0% {
+        top: 40px;
+        left: 40px;
+        bottom: 420px;
+        right: 420px;
+    }
 
-/* styles for second heart */
+    25% {
+        top: 40px;
+        left: 400px;
+        right: 0;
+        bottom: 420px;
+    }
+
+    50% {
+        left: 400px;
+        top: 420px;
+        bottom: 40px;
+        right: 0;
+    }
+
+    75% {
+        bottom: 0;
+        right: 420px;
+        left: 40px;
+        top: 420px;
+    }
+    100% {
+        bottom: 420px;
+        top: 40px;
+        left: 40px;
+        right: 420px;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: #ff0000;
+    }
+
+    25% {
+        background: #ff00db;
+    }
+
+    50% {
+        background: #9b00ff;
+    }
+
+    75% {
+        background: #ff6a00;
+    }
+    100% {
+        background: #ff0000;
+    }
+}
+
+.move-heart {
+    background: black;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    margin: 100px;
+}
+
+.cont-heart{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: rotate(45deg);
+    animation: 10s heart ease infinite;
+
+    /*transform: rotate(45deg);*/
+}
+
+.cont-heart2 {
+    animation: 1.3s pulse ease-in-out infinite;
+}
+
+.move-heart-2,
+.move-heart-2::after,
+.move-heart-2::before {
+    animation: 10s bg ease infinite;
+}
+

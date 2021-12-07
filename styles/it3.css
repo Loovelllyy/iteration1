@@ -14,6 +14,24 @@ body {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.42) 0%, rgba(252, 167, 70, 0.63) 100%);
 }
 
+.bubble-style {
+    position: fixed;
+    display: block;
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(rgba(255, 192, 131), rgba(255, 147, 147));
+    margin: 0 auto;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.hidden {
+    display: none;
+}
+
 h1 {
     text-align: center;
     transform: rotate(90deg);
@@ -35,7 +53,11 @@ input {
     align-items: center;
 }
 
-.wrapper:nth-child(1) {
+body > .wrapper:nth-child(1) {
+    z-index: 1;
+}
+
+body > .wrapper:nth-child(1) {
     grid-area: yellow-block;
 }
 
@@ -138,3 +160,4 @@ form {
     display: block;
     margin: 5px 0;
 }
+
