@@ -9,6 +9,7 @@ const [output1, output2, output3] = document.querySelectorAll(".outputs");
 const click = document.getElementById("click-btn");
 const aboutBlock = document.querySelector(".bubble-style");
 const date = document.querySelector(".date");
+const buttonForward = document.querySelector(".forward");
 
 const random = (min = 0, max = 256) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -112,8 +113,8 @@ addEventListener("keydown", (ev) => {
     if (ev.altKey && ev.code === "KeyR") {
         let resPrompt = prompt("значение ключа из cookie", '');
         if (!document.cookie.includes(resPrompt)) return 0;
-        // console.log("that`s cookie will be deleted", )
-        console.log(document.cookie)
+        alert("this cookie will be changed and deleted after 1 minute");
+        document.cookie = `${resPrompt}=${makeStr()}; max-age=60`
     }
 })
 
@@ -121,4 +122,8 @@ date.addEventListener("change", (ev) => {
     console.log(ev.target.value);
     localStorage.setItem('date', ev.target.value);
     sessionStorage.setItem('date', ev.target.value);
+})
+
+buttonForward.addEventListener("click", () => {
+    history.forward()
 })

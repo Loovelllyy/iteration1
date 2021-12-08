@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles/adaptive.css">
   <link rel="stylesheet" href="styles/animation.css">
   <link rel="stylesheet" href="styles/pet.css">
+<!--  <link rel="stylesheet" href="styles/nav.css">-->
   <title>First iteration</title>
 
 </head>
@@ -26,8 +27,10 @@
 
   <div class="green-blocks">
     <div class="wrapper">
-      <p class="hidden bubble-style">здесь текст</p>
+      <p class="hidden bubble-style"></p>
       <p>there will be a lot of inputs :)</p>
+      <a href="./navigation.html" class="action-btn"><span>Click to go to a new page</span></a>
+      <div class="forward">forward ></div>
       <input type="text" placeholder="type any text here" id="text">
       <button id="changeText">Click to change text in paragraph</button>
       <input type="number" placeholder="type any number here" class="operand">
@@ -146,6 +149,7 @@
 
   <script src="index.js"></script>
   <script src="classPet.js"></script>
+<!--  <script src="nav.js"></script>-->
   <script>
     const inputText = document.getElementById("text");
     const textArea = document.getElementById("textArea");
