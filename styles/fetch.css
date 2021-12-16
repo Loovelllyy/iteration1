@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    padding: 15px;
+}
+
+html, body {
+    min-height: 100%;
+    background: rgb(116, 51, 157) 100%;
+    background: radial-gradient(circle, rgb(243, 246, 255) 0%, rgb(116, 51, 157) 100%) no-repeat;
+}
+
+.new-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.action-btn {
+    align-self: center;
+    width: max-content;
+    background: purple;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 50% 10%;
+    box-sizing: border-box;
+}
+
+.action-btn:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.input-username {
+    padding: 5px;
+    text-align: right;
+    border-radius: 10%;
+}
+
+ol {
+    /*list-style: none;*/
+    width: max-content;
+}
+
+ol > li {
+    margin: 3px;
+    text-align: left;
+}
+
+.error {
+    background: rgb(220,80,249);
+    text-align: center;
+    border: 2px solid purple;
+    border-radius: 20%;
+    padding: 50px;
+    width: max-content;
+    position: absolute;
+    /*margin: 0 auto;*/
+    /*top: 50%;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+}
